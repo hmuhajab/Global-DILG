@@ -10,25 +10,6 @@ This repository contains a Jupyter notebook and related files for processing geo
 - **`Saudi_KG.zip`**: Contains the populated knowledge graph.
 
 ## Overview of the Jupyter Notebook
+This contains the Global _DLIGS data model and the code for populating the data into the model. The Saudi_KG zip folder contains the geographic linked data.
 
-### 1. Install Necessary Libraries
-The notebook begins by installing the `rdflib` library, which is used for handling RDF data in Python.
 
-### 2. Loading and Parsing Ontology
-The existing ontology RDF file is loaded into a graph structure. This file serves as the foundation for adding new geographic data.
-
-### 3. Processing JSON Data
-The notebook defines functions to process GADM and OSM JSON files. For each geographic entity, RDF triples are created, including information such as GADM ID, type, latitude, longitude, and spatial relationships (e.g., containment and neighboring relationships).
-
-### 4. Updating Relationships
-After populating the RDF graph, specific relationships like the `ehInside` (inside) property are corrected and updated to reflect accurate spatial containment within the populated places.
-
-### 5. Saving and Verifying
-The RDF graph is serialized and saved to a new RDF file. The notebook also includes verification steps to ensure that the relationships have been correctly updated.
-
-## Running the Notebook
-
-To run this notebook, you need to have Python installed along with the `rdflib` library. You can install the required library using:
-
-```bash
-pip install rdflib
